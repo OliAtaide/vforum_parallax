@@ -1,0 +1,39 @@
+#field{
+    position: relative;
+    height: 660px;
+    width: 100%;
+}
+
+#object {
+    position: absolute;
+    left: -25%;
+    height: 660px;
+    width: 660px;
+    border-radius:5px;
+    background: #E75913;
+}
+
+#space{
+    height: 1000px;
+}
+
+body {
+    background: grey;
+}
+
+#cubes div{
+    height: 120px;
+    width: 0%;
+}
+
+#cube1{
+    background-color: #3A98CF;
+}
+
+#cube2{
+    background-color: #0181A4;;
+}
+
+#cube3{
+    background-color: #8AD4D8;
+}
