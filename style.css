@@ -17,6 +17,15 @@
     height: 1000px;
 }
 
+.blue{
+    height: 540px;
+    background: #1D4A96;
+}
+
+svg{
+    margin-top: -150px;
+}
+
 body {
     background: grey;
 }
@@ -26,14 +35,56 @@ body {
     width: 0%;
 }
 
-#cube1{
+#cubes #cube1{
     background-color: #3A98CF;
 }
 
-#cube2{
+#cubes #cube2{
     background-color: #0181A4;;
 }
 
-#cube3{
+#cubes #cube3{
     background-color: #8AD4D8;
+}
+
+#cubes2, #cubes3{
+    height: 170px;
+}
+
+#cubes2 div, #cubes3 div{
+    min-height: 50px;
+    width: 100%;
+}
+
+
+#cubes2 #cube1, #cubes3 #cube1{
+    background-color: #73C6C9;
+}
+
+#cubes2 #cube2, #cubes3 #cube2{
+    background-color: #21B4B3;
+}
+
+#cubes2 #cube2, #cubes2 #cube4, #cubes3 #cube2, #cubes3 #cube4{
+    max-height: 120px;
+}
+
+#cubes2 #cube1, #cubes3 #cube3, #cubes2 #cube5{
+    max-height: 70px;
+}
+
+#cubes2 #cube3, #cubes3 #cube1, #cubes3 #cube5{
+    max-height: 170px;
+}
+
+#cubes2 #cube3, #cubes3 #cube3{
+    background-color: #2B57A4;
+}
+
+#cubes2 #cube4, #cubes3 #cube4{
+    background-color: #429BD5;
+}
+
+#cubes2 #cube5, #cubes3 #cube5{
+    background-color: #8ED1E7;
 }

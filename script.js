@@ -66,3 +66,54 @@ $(function () {
         }
     });
 });
+
+$(function () {
+    $(window).scroll(function () {
+        var scroll_position = $(window).scrollTop();
+        var field_top = $('#cubes2 div').position().top - ($(window).height()/2);
+        var field_bottom = $('#cubes2 div').position().top + (340);
+        if (scroll_position > field_top && scroll_position < field_bottom) {
+            var height = scroll_position - field_top;
+            var object_position_height = (height * 100) / 170 
+            $('#cubes2 div').css({
+                'height': object_position_height + '%'
+            });
+        }
+        else if (scroll_position < field_top){
+            $('#cubes2 div').css({
+                'height': '50px'
+            });
+        }
+        else if (scroll_position > field_bottom){
+            $('#cubes2 div').css({
+                'height': '100%'
+            });
+        }
+    });
+});
+
+$(function () {
+    $(window).scroll(function () {
+        var scroll_position = $(window).scrollTop();
+        var field_top = $('#cubes3 div').position().top - ($(window).height()/2);
+        var field_bottom = $('#cubes3 div').position().top + (340);
+
+        if (scroll_position > field_top && scroll_position < field_bottom) {
+            var height = scroll_position - field_top;
+            var object_position_height = (height * 100) / 170
+            $('#cubes3 div').css({
+                'height': (100 - object_position_height) + '%'
+            });
+        }
+        else if (scroll_position < field_top){
+            $('#cubes3 div').css({
+                'height': '100%'
+            });
+        }
+        else if (scroll_position > field_bottom){
+            $('#cubes3 div').css({
+                'height': '50px'
+            });
+        }
+    });
+});
