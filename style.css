@@ -23,7 +23,25 @@
 }
 
 svg{
-    margin-top: -150px;
+    position: absolute;
+    top: 0;
+    min-width: 1440px;
+    min-height: 600px;
+}
+
+.ondas{
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+.ondas img{
+    position: absolute;
+    bottom: 0;
+}
+
+.onda2, .onda4, .onda6{
+    right: 0;
 }
 
 body {
