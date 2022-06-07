@@ -169,30 +169,35 @@ $(function () {
         var scroll_position = $(window).scrollTop();
         var field_top = $('.ondas').position().top - ($(window).height() / 2);
         var field_bottom = $('.ondas').position().top;
+        var ib = 180;
 
         $('.ondas img').each(function (i, onda) {
             if (scroll_position > field_top && scroll_position < field_bottom) {
                 // var object_position_left = (object_width + 660) * ((scroll_position - field_top) / 660);
-                var object_position_left = (scroll_position - field_top) * ($(this).width() - $(window).width()) / (field_bottom - field_top);
-                console.log((scroll_position - field_top), (field_bottom - field_top));
+                var object_position_x = (scroll_position - field_top) * ($(this).width() - $(window).width()) / (field_bottom - field_top);
+                var object_position_y = (scroll_position - field_top) * ib / (field_bottom - field_top);
+
+                console.log(object_position_y);
 
                 if (i % 2 == 0){
                     $(this).css({
-                        'left': object_position_left * -1
+                        'left': object_position_x * -1,
+                        'bottom': object_position_y
                     })
                 }
                 else {
                     $(this).css({
-                        'right': object_position_left * -1
+                        'right': object_position_x * -1,
+                        'bottom': object_position_y
                     });
                 }
             }
             else if (scroll_position < field_top) {
                 $('.onda1, .onda3, .onda5').css({
-                    'left': '0'
+                    'left': '0',
                 });
                 $('.onda2, .onda4, .onda6').css({
-                    'right': '0'
+                    'right': '0',
                 });
             }
             else if (scroll_position > field_bottom) {
@@ -207,6 +212,7 @@ $(function () {
                     });
                 }
             }
+            ib-=36;
         });
     });
 });
